@@ -14,8 +14,8 @@
 
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
-
+    --clr-accent: #00c6ff;
+        
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
@@ -131,6 +131,7 @@ header {
 }
 .logo{
     max-width: 100px;
+    ;
 }
 
 .nav {
@@ -241,6 +242,8 @@ header {
 }
 .intro__img {
     box-shadow: var(--bs);
+    height: 300px;
+    width: 300px;
 }
 
 @media (min-width: 600px) {
@@ -330,13 +333,24 @@ header {
     text-align: center;
 }
 
+
 .portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+}
+.column{
+    flex: 25%;
+    padding: 5px;
+    overflow: hidden;
+
+}
+img{
+    width: 900px;
+    height: 480px;
+    object-fit: cover;
 }
 
 .portfolio__item{
-    background: var(--clr-accent);
+    /* background: var(--clr-accent); */
     overflow: hidden;
 
 }
@@ -345,6 +359,8 @@ header {
     transition: 
     transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
+    max-width: 480px;
+    max-height: 480px;
 }
 
 .portfolio__item:focus {
@@ -358,6 +374,9 @@ header {
     opacity: .75;
 
 }
+
+
+
 
 .footer {
    
@@ -398,4 +417,21 @@ header {
 
 .social-list__link{
     padding: .5em;
+}
+
+/* Individual portfolio item styles */
+
+.project-item-individual{
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.project-item-individual p{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+
 }
